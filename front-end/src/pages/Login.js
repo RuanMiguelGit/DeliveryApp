@@ -8,14 +8,16 @@ import Error from '../components/Error';
 import Loading from '../components/Loading';
 import '../Styles/Login.css';
 import { sendLogin } from '../services/apiRequest';
-// import { saveUserInLocalStorage, getUserRole, getUserToken } from '../services/localStorage';
+import { saveUserInLocalStorage } from '../services/localStorage';
+
 const six = 6;
 const Login = () => {
   const {
     setLoginEmail,
     setLoginPassword,
     loginEmail,
-    loginPassword } = useContext(appContext);
+    loginPassword,
+    setUserEmail } = useContext(appContext);
 
   const [formValid, setValid] = useState(true);
   const [userInfo, setUserInfo] = useState([]);
@@ -44,8 +46,9 @@ const Login = () => {
   }, [loginEmail, loginPassword]);
 
   useEffect(() => {
+    setUserEmail(loginEmail);
     if (userInfo.role === 'customer') return history.push('/customer/products');
-  }, [history, userInfo]);
+  }, [history, loginEmail, setUserEmail, userInfo]);
 
   const SendLogin = async (e) => {
     setLoading(true);
@@ -54,6 +57,7 @@ const Login = () => {
       .then((res) => {
         console.log(res);
         setUserInfo(res.data.user);
+        saveUserInLocalStorage(res.data.user);
       })
       .catch((error) => {
         setReqError(error.response.data.message);

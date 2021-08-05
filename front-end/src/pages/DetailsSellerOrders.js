@@ -22,6 +22,10 @@ export default function DetailsSellersOrders() {
     sendData('http://localhost:3001/sale/created', id)
       .then((res) => {
         setCurrentSell(res.data.data);
+        if(res.data.data.map(item => item.status).includes("Preparando") )
+        return  setAble(true), setDisable(false)
+
+       
       })
       .catch((err) => {
         console.log(err.response);

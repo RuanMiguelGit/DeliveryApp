@@ -38,5 +38,6 @@ app.get('/products', productsController.getProducts);
 app.post('/orders', salesController.getSalesByUser);
 app.post('/sale/created', salesController.getGeneratedSell);
 app.get('/saleBy', salesController.getSell);
+app.put('/update/sale', salesController.updateStatusSale);
 
 module.exports = app;

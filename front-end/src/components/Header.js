@@ -4,6 +4,7 @@ import { useHistory } from 'react-router-dom';
 import Button from './Button';
 import {
   getUserName,
+  getUserRole,
   clearUserInLocalStorage } from '../services/localStorage';
 
 import '../Styles/Header.css';
@@ -31,7 +32,7 @@ export default function Header() {
           name="Meus Pedidos"
           btnclass="link-button"
           disable={ false }
-          onClick={ () => history.push('/customer/orders') }
+          onClick={ () => history.push(`/${getUserRole()}/orders`) }
         />
       </div>
       <div>

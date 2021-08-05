@@ -37,25 +37,22 @@ const getAllSalesProducts = async (req, res) => {
 
 // teste com POST **UTILIZAR CAMEL CASE NA CREATED**
 const createSale = async (req, res) => {
-  const { 
-     userId, sellerId, totalPrice, deliveryAddress, deliveryNumber, status,
-     products, 
-     quantity } = req.body;
-    const t = totalPrice.replace(/,/g, '.');
-    const data = await 
-    sale.create({ 
+  const {
+    userId, sellerId, totalPrice, deliveryAddress, deliveryNumber, status,
+    products,
+    quantity } = req.body;
+  const t = totalPrice.replace(/,/g, '.');
+  const data = await
+    sale.create({
     userId, sellerId, totalPrice: t, deliveryAddress, deliveryNumber, status, saleDate: new Date(),
     });
-    // const saleId= 'sale_id',
-    const { id } = await sale.findOne({ where: { id: data.id } });
-    await products.forEach((item, index) => {
-     console.log(item);
-     console.log(id);
+  // const saleId= 'sale_id',
+  const { id } = await sale.findOne({ where: { id: data.id } });
+  await products.forEach((item, index) => {
     salesProducts.create({ [['sale_id']]: id, [['product_id']]: item, quantity: quantity[index] });
-    console.log(quantity[index]);
-     });
-    
-    return res.status(201).json(id);
+  });
+
+  return res.status(201).json(id);
 };
 // ----------------------------------------------------------------------
 
@@ -96,7 +93,6 @@ const getGeneratedSell = async (req, res) => {
         { model: user, as: 'seller', attributes: ['name'] },
         { model: product, as: 'products', through: { attributes: ['quantity'] } }],
     });
-    console.log(data);
     return res.status(200).json({ data: [data] });
   } catch (err) {
     return res.status(500).json({ message: messageError, err: err.message });
@@ -105,14 +101,10 @@ const getGeneratedSell = async (req, res) => {
 
 const getSellById = async (req, res) => {
   try {
-     const {id, value} = req.body
-    const data = await sale.update(
-      {status:value},
-      {where:{id:id}});
-      const updated = await sale.findOne({
-        where:{id:id}
-      })
-    
+    const { id, value } = req.body;
+    await sale.update({ status: value }, { where: { id } });
+    const updated = await sale.findOne({ where: { id } });
+
     return res.status(200).json(updated);
   } catch (err) {
     return res.status(500).json({ message: messageError, err: err.message });
@@ -121,12 +113,24 @@ const getSellById = async (req, res) => {
 
 const getSell = async (req, res) => {
   try {
-     const {id} = req.body
- 
-      const updated = await sale.findOne({
-        where:{id:id}
-      })
-    
+    const { id } = req.body;
+    const updated = await sale.findOne({ where: { id } });
+
+    return res.status(200).json(updated);
+  } catch (err) {
+    return res.status(500).json({ message: messageError, err: err.message });
+  }
+};
+
+const updateStatusSale = async (req, res) => {
+  try {
+    const { id, value } = req.body;
+    await sale.update({ status: value }, { where: { id } });
+    const updated = await sale.findOne({
+      where: { id },
+      attributes: { exclude: ['user_id', 'seller_id'] },
+    });
+
     return res.status(200).json(updated);
   } catch (err) {
     return res.status(500).json({ message: messageError, err: err.message });
@@ -141,5 +145,6 @@ module.exports = {
   createRelation,
   getGeneratedSell,
   getSellById,
-  getSell
+  getSell,
+  updateStatusSale,
 };

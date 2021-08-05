@@ -1,11 +1,18 @@
 import React, { useEffect, useState } from 'react';
-
 import { useHistory } from 'react-router-dom';
+import { io } from 'socket.io-client';
+
 import { requestUser } from '../services/apiRequest';
 import { getUserEmail } from '../services/localStorage';
 import Loading from './Loading';
 
 import '../Styles/ClientOrders.css';
+
+const SERVER = 'http://localhost:3001';
+
+const socket = io(SERVER);
+
+socket.on('connect', () => console.log('conectou'));
 
 export default function ClientOrders() {
   const [userSales, setUserSales] = useState([]);

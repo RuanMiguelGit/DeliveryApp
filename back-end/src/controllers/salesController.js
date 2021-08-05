@@ -70,7 +70,7 @@ const getSalesByUser = async (req, res) => {
       const data = await sale.findAll({
         where: { userId: id },
       });
-      res.status(200).json(data);
+      return res.status(200).json(data);
     }
     const data = await sale.findAll({
       where: { sellerId: id },

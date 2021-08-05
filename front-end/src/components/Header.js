@@ -2,7 +2,9 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 
 import Button from './Button';
-import { getUserName, clearUserInLocalStorage } from '../services/localStorage';
+import {
+  getUserName,
+  clearUserInLocalStorage } from '../services/localStorage';
 
 import '../Styles/Header.css';
 
@@ -38,7 +40,7 @@ export default function Header() {
           name={ getUserName() }
           btnclass="link-user"
           disable={ false }
-          onClick={ console.log('user') }
+          onClick={ () => console.log('user') }
         />
         <Button
           testId="customer_products__element-navbar-link-logout"

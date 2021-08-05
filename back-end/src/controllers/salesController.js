@@ -103,6 +103,36 @@ const getGeneratedSell = async (req, res) => {
   }
 };
 
+const getSellById = async (req, res) => {
+  try {
+     const {id, value} = req.body
+    const data = await sale.update(
+      {status:value},
+      {where:{id:id}});
+      const updated = await sale.findOne({
+        where:{id:id}
+      })
+    
+    return res.status(200).json(updated);
+  } catch (err) {
+    return res.status(500).json({ message: messageError, err: err.message });
+  }
+};
+
+const getSell = async (req, res) => {
+  try {
+     const {id} = req.body
+ 
+      const updated = await sale.findOne({
+        where:{id:id}
+      })
+    
+    return res.status(200).json(updated);
+  } catch (err) {
+    return res.status(500).json({ message: messageError, err: err.message });
+  }
+};
+
 module.exports = {
   getAllSalesUser,
   getAllSalesProducts,
@@ -110,4 +140,6 @@ module.exports = {
   getSalesByUser,
   createRelation,
   getGeneratedSell,
+  getSellById,
+  getSell
 };

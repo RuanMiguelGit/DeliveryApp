@@ -28,6 +28,7 @@ app.get('/users/all', usersController.getAllUsers);
 
 // teste Franco
 app.post('/sales', TokenAuth, salesController.createSale);
+app.post('/salesId', salesController.getSellById);
 app.get('/relation', salesController.createRelation);
 
 // rotas validas
@@ -36,5 +37,7 @@ app.post('/register', userController.register);
 app.get('/products', productsController.getProducts);
 app.post('/orders', salesController.getSalesByUser);
 app.post('/sale/created', salesController.getGeneratedSell);
+app.get('/saleBy', salesController.getSell);
+app.put('/update/sale', salesController.updateStatusSale);
 
 module.exports = app;

@@ -64,3 +64,15 @@ export const sendData = async (url, id) => {
   const response = await axios.post(url, data, axiosConfig);
   return response;
 };
+
+export const getSell = async (url, id, value) => {
+  const data = { id, value };
+  const response = await axios.post(url, data, axiosConfig);
+  return response;
+};
+
+export const updateSale = async (url, id, value) => {
+  const data = { id, value };
+  const response = await axios.put(url, data, axiosConfig);
+  return response;
+};

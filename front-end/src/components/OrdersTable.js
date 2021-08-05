@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Button from './Button';
 
-const OrdersTable = ({ orders, loading, thounsand, dataTestBegin, disable }) => (
+const OrdersTable = ({ orders, loading, thounsand, dataTestBegin, updateOnClick }) => (
   <div>
     <div className="OrdersTable">
       {loading ? <p>Carregando</p> : orders.map((item) => (
@@ -50,7 +50,10 @@ const OrdersTable = ({ orders, loading, thounsand, dataTestBegin, disable }) => 
                 <Button
                   name="MARCAR COMO ENTREGUE"
                   testId="customer_order_details__button-delivery-check"
-                  disable={ disable }
+                  disable={ item.status === 'Pendente'
+                  || item.status === 'Preparando'
+                  || item.status === 'Entregue' }
+                  onClick={ () => updateOnClick(item.id, 'Entregue') }
                 />
               </th>
             </tr>
@@ -135,6 +138,6 @@ OrdersTable.propTypes = {
   loading: PropTypes.string.isRequired,
   thounsand: PropTypes.string.isRequired,
   dataTestBegin: PropTypes.string.isRequired,
-  disable: PropTypes.string.isRequired,
+  updateOnClick: PropTypes.func.isRequired,
 };
 export default OrdersTable;

@@ -73,7 +73,7 @@ Manter aderência aos princípios SOLID;
 <li>Socket.io</li>
 
 <h5> Apresentação </h5>
-<p> Já existe uma apresentação pronta sobre o projeto eposso apresenta-lo tanto presencialmente quanto por video </p>
+<p> Já existe uma apresentação pronta sobre o projeto eposso apresenta-lo tanto de maneira síncrona quanto de maneira assíncrona </p>
 <p> O projeto irá passar por melhorias de desempenho no futuro</p>
 
 <h5> Agradecimentos </h5>

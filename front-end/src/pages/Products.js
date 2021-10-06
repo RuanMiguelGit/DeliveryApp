@@ -1,14 +1,11 @@
 /* eslint-disable */
 import React, { useContext, useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
-
 import appContext from '../context/appContext';
 import { getData } from '../services/apiRequest';
 import CardProduct from '../components/CardProduct';
 import Header from '../components/Header';
-
-// import do dado mockado
-// import mockProducts from '../services/mockProducts.json'
+import '../Styles/products.css';
 
 export default function Products() {
   const { cart } = useContext(appContext);
@@ -21,11 +18,8 @@ export default function Products() {
     setLoading(true);
     getData('http://localhost:3001/products')
       .then((data) => {
-        // console.log('retorno API', data);
         setProducts(data);
       });
-    // console.log('dado mockado', mockProducts.products)
-    // setProducts(mockProducts.products); // dados mockados
     setLoading(false);
   }, []);
 
@@ -50,7 +44,7 @@ export default function Products() {
       <button
         type="button"
         data-testid="customer_products__button-cart"
-        className="total-button"
+        className="total"
         onClick={ () => history.push('/customer/checkout') }
         disabled={ Object.keys(cart).length === 0 }
       >

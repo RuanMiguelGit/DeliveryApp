@@ -46,7 +46,7 @@ export default function Header() {
         <Button
           testId="customer_products__element-navbar-link-logout"
           name="Sair"
-          btnclass="link-button"
+          btnclass="link-buttonLogout"
           disable={ false }
           onClick={ logout }
         />

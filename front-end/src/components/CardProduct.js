@@ -1,10 +1,11 @@
+/* eslint-disable */
 import React, { useContext, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
 import appContext from '../context/appContext';
 import Button from './Button';
 
-import '../Styles/CardProduct.css';
+import '../Styles/products.css';
 
 export default function CardProduct({ item }) {
   const { id, name, price, urlImage } = item;
@@ -42,24 +43,26 @@ export default function CardProduct({ item }) {
   };
 
   return (
-    <li>
-      <p data-testid={ `customer_products__element-card-price-${id}` }>{priceBr}</p>
+    <li className="products">
+      <p data-testid={ `customer_products__element-card-title-${id}` } className='product-name'>{name}</p>
       <img
-        className="img-card-product"
-        data-testid={ `customer_products__img-card-bg-image-${id}` }
-        src={ urlImage }
-        alt={ urlImage.split('/').pop() }
+      className="product-picture"
+      data-testid={ `customer_products__img-card-bg-image-${id}` }
+      src={ urlImage }
+      alt={ urlImage.split('/').pop() }
       />
-      <p data-testid={ `customer_products__element-card-title-${id}` }>{name}</p>
+      <p data-testid={ `customer_products__element-card-price-${id}` }
+      className="product-price">{priceBr}</p>
       <Button
         testId={ `customer_products__button-card-rm-item-${id}` }
         name="-"
-        btnclass="qty-button"
+        btnclass="product-increase"
         onClick={ updateQuantity }
       />
       <input
         data-testid={ `customer_products__input-card-quantity-${id}` }
-        type="number"
+        type="text"
+        className="product-value"
         value={ quantity }
         onClick={ () => setQuantity('') }
         onChange={ ({ target }) => setQuantity(target.value) }
@@ -67,7 +70,7 @@ export default function CardProduct({ item }) {
       <Button
         testId={ `customer_products__button-card-add-item-${id}` }
         name="+"
-        btnclass="qty-button"
+        btnclass="product-decrease"
         onClick={ updateQuantity }
       />
     </li>

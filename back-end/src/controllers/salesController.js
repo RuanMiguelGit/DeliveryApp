@@ -1,37 +1,17 @@
 const { sale, user, product, salesProducts } = require('../database/models');
-
-const messageError = 'Algo deu errado';
+const salesService = require('../service/salesService')
 
 // callback criadas para testes das associações
 const getAllSalesUser = async (req, res) => {
-  try {
-    const data = await sale.findAll({
-      attributes: { exclude: ['user_id', 'seller_id'] },
-      include: [
-        { model: user, as: 'user', attributes: { exclude: ['id'] } },
-        { model: user, as: 'seller', attributes: { exclude: ['id'] } },
-      ],
-    });
-    console.log(data);
-    return res.status(200).json(data);
-  } catch (err) {
-    return res.status(500).json({ message: messageError, err: err.message });
-  }
+  const { data , err, code, messageError } = await salesService.getAllSalesUser()
+  if (err) return res.status(code).json({messageError, message:err.message})
+     return res.status(code).json(data)
 };
 
 const getAllSalesProducts = async (req, res) => {
-  try {
-    const data = await sale.findAll({
-      attributes: { exclude: ['user_id', 'seller_id'] },
-      include: [
-        { model: product, as: 'products', through: { attributes: [] } },
-      ],
-    });
-    console.log(data);
-    return res.status(200).json(data);
-  } catch (err) {
-    return res.status(500).json({ message: messageError, err: err.message });
-  }
+  const { data , err, code, messageError } = await salesService.getAllSalesUser()
+  if (err) return res.status(code).json({messageError, message:err.message})
+     return res.status(code).json(data)
 };
 // ----------------------------------------------------------------------
 
@@ -41,100 +21,59 @@ const createSale = async (req, res) => {
     userId, sellerId, totalPrice, deliveryAddress, deliveryNumber, status,
     products,
     quantity } = req.body;
-  const t = totalPrice.replace(/,/g, '.');
-  const data = await
-    sale.create({
-    userId, sellerId, totalPrice: t, deliveryAddress, deliveryNumber, status, saleDate: new Date(),
-    });
-  // const saleId= 'sale_id',
-  const { id } = await sale.findOne({ where: { id: data.id } });
-  await products.forEach((item, index) => {
-    salesProducts.create({ [['sale_id']]: id, [['product_id']]: item, quantity: quantity[index] });
-  });
-
-  return res.status(201).json(id);
+  const {code, id, err, messageError } =  await salesService.createSale(userId,
+    sellerId, 
+    totalPrice, 
+    deliveryAddress, 
+    deliveryNumber, 
+    status,
+    products,
+    quantity )
+  if (err) return res.status(code).json({messageError, message:err.message})
+  return res.status(code).json(id);
 };
 // ----------------------------------------------------------------------
 
 // callbacks validas
 const getSalesByUser = async (req, res) => {
   const { email } = req.body;
-  try {
-    const { id, role } = await user.findOne({
-      where: { email },
-    });
-    if (role === 'customer') {
-      const data = await sale.findAll({
-        where: { userId: id },
-      });
-      return res.status(200).json(data);
-    }
-    const data = await sale.findAll({
-      where: { sellerId: id },
-    });
-    return res.status(200).json(data);
-  } catch (err) {
-    return res.status(500).json({ message: messageError, err: err.message });
-  }
+  const { data , err, code, messageError } = await salesService.getSalesByUser(email)
+  if (err) return res.status(code).json({messageError, message:err.message})
+  return res.status(code).json(data)
 };
 
-const createRelation = async (req, res) => {
-  const data = await salesProducts.findAll({});
-  return res.status(200).json(data);
+const createRelation = async (_req, res) => {
+  const { data , err, code, messageError } = await salesService.createRelation()
+  if (err) return res.status(code).json({messageError, message:err.message})
+  return res.status(code).json(data)
 };
 
 const getGeneratedSell = async (req, res) => {
-  const { sellId } = req.body;
-  try {
-    const data = await sale.findOne({
-      where: { id: sellId },
-      attributes: { exclude: ['user_id', 'seller_id'] },
-      include: [
-        { model: user, as: 'seller', attributes: ['name'] },
-        { model: product, as: 'products', through: { attributes: ['quantity'] } }],
-    });
-    return res.status(200).json({ data: [data] });
-  } catch (err) {
-    return res.status(500).json({ message: messageError, err: err.message });
-  }
+  const { sellId } = req.body
+  const { data , err, code, messageError } = await salesService.getGeneratedSell(sellId)
+  if (err) return res.status(code).json({messageError, message:err.message})
+  return res.status(code).json({data:[data]})
 };
 
 const getSellById = async (req, res) => {
-  try {
-    const { id, value } = req.body;
-    await sale.update({ status: value }, { where: { id } });
-    const updated = await sale.findOne({ where: { id } });
-
-    return res.status(200).json(updated);
-  } catch (err) {
-    return res.status(500).json({ message: messageError, err: err.message });
-  }
+  const { id, value } = req.body
+  const { data , err, code, messageError } = await salesService.getSellById(id, value)
+  if (err) return res.status(code).json({messageError, message:err.message})
+  return res.status(code).json(data)
 };
 
 const getSell = async (req, res) => {
-  try {
-    const { id } = req.body;
-    const updated = await sale.findOne({ where: { id } });
-
-    return res.status(200).json(updated);
-  } catch (err) {
-    return res.status(500).json({ message: messageError, err: err.message });
-  }
+  const { id } = req.body
+  const { data , err, code, messageError } = await salesService.getSell(id)
+  if (err) return res.status(code).json({messageError, message:err.message})
+  return res.status(code).json(data)
 };
 
 const updateStatusSale = async (req, res) => {
-  try {
-    const { id, value } = req.body;
-    await sale.update({ status: value }, { where: { id } });
-    const updated = await sale.findOne({
-      where: { id },
-      attributes: { exclude: ['user_id', 'seller_id'] },
-    });
-
-    return res.status(200).json(updated);
-  } catch (err) {
-    return res.status(500).json({ message: messageError, err: err.message });
-  }
+  const { id, value } = req.body
+  const { data , err, code, messageError } = await salesService.getSellById(id,value)
+  if (err) return res.status(code).json({messageError, message:err.message})
+  return res.status(code).json(data)
 };
 
 module.exports = {

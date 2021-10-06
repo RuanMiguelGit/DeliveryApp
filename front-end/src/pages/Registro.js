@@ -1,15 +1,15 @@
 /* eslint-disable */
 import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import Input from '../components/Input';
 import { sendRegister } from '../services/apiRequest';
-import '../Styles/Login.css';
+import Input from '../components/Input';
 import Button from '../components/Button';
 import Error from '../components/Error';
 import Loading from '../components/Loading';
+import '../Styles/Login.css';
 
 const six = 6;
-const Twelve = 12;
+const Four = 4;
 const Registro = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -31,18 +31,16 @@ const Registro = () => {
   };
 
   useEffect(() => {
-    if (!validEmail() || password.length < six || name.length < Twelve) {
+    if (!validEmail() || password.length < six || name.length < Four) {
       return setValid(true);
     }
     return setValid(false);
 
-    // !validEmail(email) || password.length < six
-    // || name.length < Twelve ? setValid(true) : setValid(false);
   }, [name, email, password]);
 
   useEffect(() => {
     if (registerInfo !== 0
-    && registerInfo.role === 'customer') return history.push('/customer/products');
+    && registerInfo.role === 'customer') return history.push('/');
   }, [registerInfo]);
 
   const registration = async () => {

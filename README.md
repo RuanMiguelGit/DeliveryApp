@@ -60,7 +60,7 @@ Manter aderência aos princípios SOLID;
     </p> Dentro da pasta app/App.js  é posivel encontrar as requisições existem blocos e cada bloco está discriminado com o seu propósito</p>
     <p> A minha contribuição direta no projeto pode ser conferida pelo link abaixo, todos os membros trabalharam fullstack, e trabalhamos por telas</p>
   <li> https://trello.com/invite/b/JCEOPoMY/e00fa52426f04ec8c8d9a08390f35a64/g13-delivery-app</li>
-  <p> Eu fiz 90% do design, nesse modelo foi utilizado o css separado nem nem um framework </p>
+  <p> Eu fiz 90% do design, nesse modelo foi utilizado o css separado sem nem um framework </p>
   
 <h4> Observação </h4> 
 <p> Devido ao fato de ser um projeto realizado para o curso e o mesmo ter sido realizado com um membro a menos do que a maioria dos outros grupos e do curso ser intenso  e já possuir uma maneira de avaliar o projeto, sendo esses os testes de integração implementados pela equipe da trybe, não foram realizados os testes unitarios, sob condições normais buscariamos realizar o mesmo para garantir a qualidade do código </p>
@@ -75,4 +75,7 @@ Manter aderência aos princípios SOLID;
 <h5> Apresentação </h5>
 <p> Já existe uma apresentação pronta sobre o projeto eposso apresenta-lo tanto presencialmente quanto por video </p>
 <p> O projeto irá passar por melhorias de desempenho no futuro</p>
+
+<h5> Agradecimentos </h5>
+<p> Gostaria de agradecer os membros da minha equipe, Gustavo Thirion e Rodrigo Sudario,  cujos sem os quais esse trabalho seria impossivel  </p>
   

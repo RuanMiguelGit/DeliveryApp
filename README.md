@@ -72,6 +72,7 @@ Manter aderência aos princípios SOLID;
 <li>ORM-Sequelize</li>
 <li>Socket.io</li>
 
-
-
+<h5> Apresentação </h5>
+<p> Já existe uma apresentação pronta sobre o projeto eposso apresenta-lo tanto presencialmente quanto por video </p>
+<p> O projeto irá passar por melhorias de desempenho no futuro</p>
   

@@ -57,7 +57,7 @@ Manter aderência aos princípios SOLID;
   <li> Estrutura da aplicação do Front-End e do Back-End</li>
     <p> O Front-End foi estruturado para garantir a organização do códido em pastas com as suas devidas responsabilidades, incluindo libs, e uma pasta de serviço onde as funções que realizavam as requisições e  lidavam com o localStorage eram disponibilizadas</p>
     <p> O Back-End foi estrtuturado com o padrão MSC e com o banco de dados sendo gerenciado pela ORM - Sequelize, organizando as validações e estruturas de uma maneira separada</p>
-    </p> Dentro da pasta app/App.js  é posivel encontrar as requisições existem cada bloco está discriminado com o seu propósito</p>
+    </p> Dentro da pasta app/App.js  é posivel encontrar as requisições existem blocos e cada bloco está discriminado com o seu propósito</p>
     <p> A minha contribuição direta no projeto pode ser conferida pelo link abaixo, todos os membros trabalharam fullstack, e trabalhamos por telas</p>
   <li> https://trello.com/invite/b/JCEOPoMY/e00fa52426f04ec8c8d9a08390f35a64/g13-delivery-app</li>
   <p> Eu fiz 90% do design, nesse modelo foi utilizado o css separado nem nem um framework </p>

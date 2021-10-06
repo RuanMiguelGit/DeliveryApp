@@ -63,7 +63,7 @@ Manter aderência aos princípios SOLID;
   <p> Eu fiz 90% do design, nesse modelo foi utilizado o css separado sem nem um framework </p>
   
 <h4> Observação </h4> 
-<p> Devido ao fato de ser um projeto realizado para o curso e o mesmo ter sido realizado com um membro a menos do que a maioria dos outros grupos e do curso ser intenso  e já possuir uma maneira de avaliar o projeto, sendo esses os testes de integração implementados pela equipe da trybe, não foram realizados os testes unitarios, sob condições normais buscariamos realizar o mesmo para garantir a qualidade do código </p>
+<p> Devido ao fato de ser um projeto realizado para o curso e o mesmo ter sido realizado com um membro a menos do que a maioria dos outros grupos e do curso  já possuir uma maneira de avaliar o projeto, sendo esses os testes de integração implementados pela equipe da trybe, não foram realizados os testes unitários, sob condições normais buscariamos realizar os mesmos para garantir a qualidade do código </p>
 <p> O projeto pode facilmente ser adptado para ser utilizado com um banco não relacional(MongoDB)</p>
 
 <h5>Tecnologias Utilizadas</h5>

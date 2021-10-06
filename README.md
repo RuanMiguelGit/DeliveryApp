@@ -53,6 +53,11 @@ Manter aderência aos princípios SOLID;
   <li> Rodrigo Sudario => https://github.com/RodrigoSudario</li>
 </ul>
 
+<h2>Como funciona a aplicação</h2>
+<p> È possível criar uma conta que seria registrada como "consumidor"ou utilizar a conta já registrada para esse propósito -> email:zebirita@email.com, senha:$#zebirita#$</p>
+<p> Uma vez logado, realize as compras e faça checkout,você poderá ver o registro de suas compras na aba pedidos </p>
+<p> Se desejar ver o fluxo do vendedor, faça logout e entra na conta da vendedora fulana, email:fulana@deliveryapp.com, senha:fulana@123, nessa conta você podera alterar o status da compra de "pendente", para "em preparo", para "em trânsito" e o cliente em sua respectiva conta poderá alterar para "entregue"</p>
+
 <h3>A minha contribuição</h3>
   <li> Estrutura da aplicação do Front-End e do Back-End</li>
     <p> O Front-End foi estruturado para garantir a organização do códido em pastas com as suas devidas responsabilidades, incluindo libs, e uma pasta de serviço onde as funções que realizavam as requisições e  lidavam com o localStorage eram disponibilizadas</p>
@@ -60,8 +65,11 @@ Manter aderência aos princípios SOLID;
     </p> Dentro da pasta app/App.js  é posivel encontrar as requisições existem blocos e cada bloco está discriminado com o seu propósito</p>
     <p> A minha contribuição direta no projeto pode ser conferida pelo link abaixo, todos os membros trabalharam fullstack, e trabalhamos por telas</p>
   <li> https://trello.com/invite/b/JCEOPoMY/e00fa52426f04ec8c8d9a08390f35a64/g13-delivery-app</li>
-  <p> Eu fiz 90% do design, nesse modelo foi utilizado o css separado sem nem um framework </p>
+  <p> Eu realizei 90% do css, nesse modelo foi utilizado o css separado sem nem um framework </p>
   
+ <h3> Minha Experiência</h3>
+  <p> Foi um projeto desafiador, exigiu boa parte de tudo que aprendi durante o curso, tivemos problemas pelos testes serem feitos com integração e decidimos utilizar mockar os dados para ganhar produtivade, o sequelize devido a sua natureza nos trouxe alguns problemas pois o mesmo possui muitos detalhes e quando um desses detalhes não é observado o mesmo acaba prejudicando o trabalho algumas etapas a frente, tenho muito orgulho desse projeto pelo aprendizado que o mesmo me deu, foi desafiador, não foi fácil mas nos trouxe grandes aprendizados</p>
+
 <h4> Observação </h4> 
 <p> Devido ao fato de ser um projeto realizado para o curso e o mesmo ter sido realizado com um membro a menos do que a maioria dos outros grupos e do curso  já possuir uma maneira de avaliar o projeto, sendo esses os testes de integração implementados pela equipe da trybe, não foram realizados os testes unitários, sob condições normais buscariamos realizar os mesmos para garantir a qualidade do código </p>
 <p> O projeto pode facilmente ser adptado para ser utilizado com um banco não relacional(MongoDB)</p>

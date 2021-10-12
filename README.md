@@ -29,6 +29,23 @@ Implementar a funcionalidade de comunicação em tempo real, utilizando o socket
 Manter aderência aos princípios SOLID;
 
 
+# Tecnologias Utilizadas
+<p align="center">
+ <div style="background-color:black">
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" style="max-width:100%;" width="40" height="40">
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" style="max-width:100%;" width="40" height="40">
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" style="max-width:100%;" width="40" height="40">
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" style="max-width:100%;" width="40" height="40">
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" alt="git" style="max-width:100%;" width="40" height="40">
+<img src="https://www.seekpng.com/png/detail/80-803529_vector-javascript-node-js-jpg-black-and-white.png" alt="Python" height="40" style="vertical-align:top; margin:4px">
+<a href="https://www.mysql.com/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="50" height="50"/> </a>
+<img src="https://google.github.io/sqlcommenter/images/sequelize-logo.png" alt="Javascript" height="50" width="50" style="vertical-align:top; margin:4px">
+<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png" alt="Javascript" height="40" style="vertical-align:top; margin:4px">
+<img src="https://i.ytimg.com/vi/wVo-UMit5Ig/maxresdefault.jpg" alt="Javascript" height="40" style="vertical-align:top; margin:4px">
+<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/visual-studio-code/visual-studio-code.png" alt="VS Code" height="40" style="vertical-align:top; margin:4px">
+<img src="https://miro.medium.com/max/812/1*J6XjrA6Zb6TwzQ-imPVc_A.png" alt="VS Code" height="40" style="vertical-align:top; margin:4px">
+</p>
+</div>
 ---
 <h1> Como Rodar o projeto</h1>
 <ul>
@@ -79,11 +96,7 @@ Manter aderência aos princípios SOLID;
 <p> Devido ao fato de ser um projeto realizado para o curso e o mesmo ter sido realizado com um membro a menos do que a maioria dos outros grupos e do curso  já possuir uma maneira de avaliar o projeto, sendo esses os testes de integração implementados pela equipe da trybe, não foram realizados os testes unitários, sob condições normais buscariamos realizar os mesmos para garantir a qualidade do código </p>
 <p> O projeto pode facilmente ser adptado para ser utilizado com um banco não relacional(MongoDB)</p>
 
-<h5>Tecnologias Utilizadas</h5>
-<li>React</li>
-<li>Node.js</li>
-<li>ORM-Sequelize</li>
-<li>Socket.io</li>
+
 
 <h5> Apresentação </h5>
 <p> Já existe uma apresentação pronta sobre o projeto eposso apresenta-lo tanto de maneira síncrona quanto de maneira assíncrona </p>

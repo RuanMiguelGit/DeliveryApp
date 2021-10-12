@@ -6,7 +6,6 @@
 <img src="https://media.giphy.com/media/58BzyurkLc1TuvOPLi/giphy.gif" />  
 
 
- 
 
 # Como Funciona
 <li> É possível criar contas na área de registros, seu email e sua senha serão guardados no banco de dados, sua senha será guardada como uma hash md5 por segurança, a conta será registrada como uma pessoa consumidora</li>
@@ -68,27 +67,29 @@
 </ul>
 
 
-  <li> Estrutura da aplicação do Front-End e do Back-End</li>
-    <p> O Front-End foi estruturado para garantir a organização do códido em pastas com as suas devidas responsabilidades, incluindo libs, e uma pasta de serviço onde as funções que realizavam as requisições e  lidavam com o localStorage eram disponibilizadas</p>
-    <p> O Back-End foi estrtuturado com o padrão MSC e com o banco de dados sendo gerenciado pela ORM - Sequelize, organizando as validações e estruturas de uma maneira separada</p>
-    </p> Dentro da pasta app/App.js  é posivel encontrar as requisições existem blocos e cada bloco está discriminado com o seu propósito</p>
-    <p> A minha contribuição direta no projeto pode ser conferida pelo link abaixo, todos os membros trabalharam fullstack, e trabalhamos por telas</p>
-  <li> https://trello.com/invite/b/JCEOPoMY/e00fa52426f04ec8c8d9a08390f35a64/g13-delivery-app</li>
-  <p> Eu realizei 90% do css, nesse modelo foi utilizado o css separado sem nem um framework </p>
+# Organização da aplicação do Front-End e do Back-End
   
- <h3> Minha Experiência</h3>
-  <p> Foi um projeto desafiador, exigiu boa parte de tudo que aprendi durante o curso, tivemos problemas pelos testes serem feitos com integração e decidimos utilizar mockar os dados para ganhar produtivade, o sequelize devido a sua natureza nos trouxe alguns problemas pois o mesmo possui muitos detalhes e quando um desses detalhes não é observado o mesmo acaba prejudicando o trabalho algumas etapas a frente, tenho muito orgulho desse projeto pelo aprendizado que o mesmo me deu, foi desafiador, não foi fácil mas nos trouxe grandes aprendizados</p>
-
-<h4> Observação </h4> 
-<p> Devido ao fato de ser um projeto realizado para o curso e o mesmo ter sido realizado com um membro a menos do que a maioria dos outros grupos e do curso  já possuir uma maneira de avaliar o projeto, sendo esses os testes de integração implementados pela equipe da trybe, não foram realizados os testes unitários, sob condições normais buscariamos realizar os mesmos para garantir a qualidade do código </p>
-<p> O projeto pode facilmente ser adptado para ser utilizado com um banco não relacional(MongoDB)</p>
+  <img src="https://i.ibb.co/HpQHxmv/front-estrutura.png" alt="VS Code" >   <img src="https://i.ibb.co/DYVnVrn/back-end-estrutura.png" alt="VS Code" >
 
 
+# Minha Contribuição no Desenvolvimento do projeto
 
-<h5> Apresentação </h5>
-<p> Já existe uma apresentação pronta sobre o projeto eposso apresenta-lo tanto de maneira síncrona quanto de maneira assíncrona </p>
-<p> O projeto irá passar por melhorias de desempenho no futuro</p>
-
-<h5> Agradecimentos </h5>
-<p> Gostaria de agradecer os membros da minha equipe, Gustavo Thirion e Rodrigo Sudario,  cujos sem os quais esse trabalho seria impossivel  </p>
+  <p>Todos os membros trabalharam fullstack e o trabalho foi dvivido por telas </p>
   
+  <li> Estruruação do Sequelize => Ruan Miguel, Rodrigo Sudario, Gustavo Thirion</li> 
+  <li> Tela de Login => Front-End, Back-End, Estilização </li>
+  <li> Tela de Registro => Front-End, Back-End, Estilização</li>
+  <li> Tela de Checkout => Front-End, Back-End, Estilização</li>
+  <li> Tela de Detalhes do Pedido => Front-End, Back-End, Estilização</li>
+  <li> Tela de Detalhes do Pedido da pessoa Vendedora => Front-End, Back-End, Estilização</li>
+  <li> Tela de Detalhes do Produto =>  Estilização</li>
+  
+  <p> È possível conferir a participação de todos os membros através do link : https://trello.com/invite/b/JCEOPoMY/e00fa52426f04ec8c8d9a08390f35a64/g13-delivery-app</p>
+  
+ # Testes 
+ <li> É posível rodas os testes de integração desenvolvidos pela equipe de back-end da trybe como o comando npm run test </li>
+ <p> Os testes unitários estão em desenvolvimento, devido a circustâncias do curso, de circustaâncias do projeto em si tais como dificuldades com o sequelize, falta de um membro do grupo e da sequência do curso e da não obrigatoriedade dos testes para projeto específico, não houve tempo hábil para a reaização dos mesmos, porém reconheço que os testes são de supra importância e essêncial no desenvolvimento de qualquer aplicação</p>
+ 
+ 
+# Pontos finais 
+<p> Foi um projeto interessante e desafiador, utilizou diversos conhecimentos que aprendemos durante o módulo de front-end e back-end,não é um projeto perfeito, não é um projeto que não precisa de melhorias, porém é um projeto de orgulho pelos aprendizados que o mesmo me proporcionou </p> 

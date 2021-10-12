@@ -1,6 +1,11 @@
 
 
 # Boas vindas ao repositório do projeto de Delivery-App-Sequelize-Node
+<img src="https://media.giphy.com/media/wDM23A6GNz6Z43SxFq/giphy.gif" />  <img src="https://media.giphy.com/media/4TtRQ01E5xBagzG40N/giphy.gif" />  
+<img src="https://media.giphy.com/media/WPyraJAVgHTemiHiTQ/giphy.gif" />  <img src="https://media.giphy.com/media/MOUnfUe2bojEmQqTZ0/giphy.gif" />  
+<img src="https://media.giphy.com/media/58BzyurkLc1TuvOPLi/giphy.gif" />  
+
+
 
 
 # Sumário

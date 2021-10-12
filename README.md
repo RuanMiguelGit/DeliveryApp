@@ -38,13 +38,13 @@
 <img src="https://miro.medium.com/max/812/1*J6XjrA6Zb6TwzQ-imPVc_A.png" alt="VS Code" height="40" style="vertical-align:top; margin:4px">
 </p>
 </div>
----
-# Como Rodar o projeto<
-<ul>
-  <ol> Git Clone no Projeto</oi>
-  <oi> Npm Install no Back-end</oi>
-  <oi> Npm install no Front-End</oi>
-  <oi> Adicionar um arquivo .env</oi>
+
+# Como Rodar o projeto
+<ol>
+  <ll> Git Clone no Projeto</li>
+  <li> Npm Install no Back-end</li>
+  <li> Npm install no Front-End</li>
+  <li> Adicionar um arquivo .env</li>
     <ul> 
       <li>NODE_ENV=development</li>
       <li>API_PORT=3001</li>
@@ -55,10 +55,10 @@
       <li>MYSQL_DB_NAME=delivery-app</li>
       <li>EVAL_ALWAYS_RESTORE_DEV_DB=true</li>
   </ul>
-  <oi> Adicione uma senha para o JWT no arquivo jwt.evaluation.key </oi>
-  <oi> Inicie o banco de dados Mysql </oi>
-  <oi> Rode o projeto com npm run start, esse comando irá restaurar o banco de dados e iniciar a aplicação</oi>
- </ul>
+  <li> Adicione uma senha para o JWT no arquivo jwt.evaluation.key </li>
+  <li> Inicie o banco de dados Mysql </li>
+  <li> Rode o projeto com npm run start, esse comando irá restaurar o banco de dados e iniciar a aplicação</li>
+ </ol>
 
 # Membros do Projeto
 <ul>

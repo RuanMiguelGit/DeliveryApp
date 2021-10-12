@@ -10,7 +10,7 @@
 
 # Como Funciona
 <li> É possível criar contas na área de registros, seu email e sua senha serão guardados no banco de dados, sua senha será guardada como uma hash md5 por segurança, a conta será registrada como uma pessoa consumidora</li>
-<li> Com uma conta registrada é possível fazer o login, nessse momento os dados serão enviados para o back-end para validação e caso tudo está correto um token será gerado e registrado no local storage da pessoa usuária, caso os dados estejam incorretos, uma mensagem de erro irá aparecer /li> 
+<li> Com uma conta registrada é possível fazer o login, nessse momento os dados serão enviados para o back-end para validação e caso tudo está correto um token será gerado e registrado no local storage da pessoa usuária, caso os dados estejam incorretos, uma mensagem de erro irá aparecer </li> 
 <li> É possivél realizar compras, existem produtos na aba de produtos e ao aumentar a quantidade o mesmo estará sendo adicionado ao carrinho de compras</li>
 <li> Uma vez tendo finalizado as compras, clique em finalizar e o usuário será levado para a área de checkout</li>
 <li> Na área de checkout será possível deletar compras e finalizar a venda, nesse momento o token que ficou registado no localStorage no momento da compra é enviado para o backend, o usuário é validado, a compra registrada no banco de dados e o usuário redirecionado para os detalhes da compra</li>
@@ -19,9 +19,6 @@
 <li> É possível fazer login como pessoa vendedora usuando o email:fulana@deliveryapp.com e senha:fulana@123</li>
 <li> Como pessoa vendedora você poderá ver todos as compras que foram feitas por todas as pessoas usuárias e alterar o status da compra de "pendente" para "em preparo", para "em trânsito" </li>  
   
-
-
-<h3>A minha contribuição</h3>
 
 
 # Tecnologias Utilizadas
@@ -42,28 +39,28 @@
 </p>
 </div>
 ---
-<h1> Como Rodar o projeto</h1>
+# Como Rodar o projeto<
 <ul>
-  <li> Git Clone no Projeto</li>
-  <li> Npm Install no Back-end</li>
-  <li> Npm install no Front-End</li>
-  <li> Adicionar um arquivo .env</li>
+  <ol> Git Clone no Projeto</oi>
+  <oi> Npm Install no Back-end</oi>
+  <oi> Npm install no Front-End</oi>
+  <oi> Adicionar um arquivo .env</oi>
     <ul> 
       <li>NODE_ENV=development</li>
       <li>API_PORT=3001</li>
-       <li>MYSQL_HOST=localhost</li>
+      <li>MYSQL_HOST=localhost</li>
       <li>MYSQL_PORT=3306</li>
       <li>MYSQL_USER=Seu nome de usuario do Mysql</li>
       <li>MYSQL_PASSWORD= Sua senha</li>
       <li>MYSQL_DB_NAME=delivery-app</li>
       <li>EVAL_ALWAYS_RESTORE_DEV_DB=true</li>
   </ul>
-  <li> Adicione uma senha para o JWT no arquivo jwt.evaluation.key </li>
-  <li> Inicie o banco de dados Mysql </li>
-  <li> Rode o projeto com npm run start, esse comando irá restaurar o banco de dados e iniciar a aplicação</li>
+  <oi> Adicione uma senha para o JWT no arquivo jwt.evaluation.key </oi>
+  <oi> Inicie o banco de dados Mysql </oi>
+  <oi> Rode o projeto com npm run start, esse comando irá restaurar o banco de dados e iniciar a aplicação</oi>
  </ul>
 
-<h2>Membros do Projeto</h2>
+# Membros do Projeto
 <ul>
   <li>Ruan Miguel => https://github.com/ruanmiguelgit</li>
   <li> Gustavo Thirion => https://github.com/Gustaft86</li>

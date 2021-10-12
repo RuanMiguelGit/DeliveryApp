@@ -6,27 +6,22 @@
 <img src="https://media.giphy.com/media/58BzyurkLc1TuvOPLi/giphy.gif" />  
 
 
-
-
-# Sumário
-
-- [Habilidades](#habilidades)
  
 
-# Habilidades
+# Como Funciona
+<li> É possível criar contas na área de registros, seu email e sua senha serão guardados no banco de dados, sua senha será guardada como uma hash md5 por segurança, a conta será registrada como uma pessoa consumidora</li>
+<li> Com uma conta registrada é possível fazer o login, nessse momento os dados serão enviados para o back-end para validação e caso tudo está correto um token será gerado e registrado no local storage da pessoa usuária, caso os dados estejam incorretos, uma mensagem de erro irá aparecer /li> 
+<li> É possivél realizar compras, existem produtos na aba de produtos e ao aumentar a quantidade o mesmo estará sendo adicionado ao carrinho de compras</li>
+<li> Uma vez tendo finalizado as compras, clique em finalizar e o usuário será levado para a área de checkout</li>
+<li> Na área de checkout será possível deletar compras e finalizar a venda, nesse momento o token que ficou registado no localStorage no momento da compra é enviado para o backend, o usuário é validado, a compra registrada no banco de dados e o usuário redirecionado para os detalhes da compra</li>
+<li> Como pessoa usuária é possiver ver todas as suas compras na aba de pedidos e caso exista algum pedido marcado como "em trânsito' a pessoa usuária poderá marcar o pedido como "entregue"</li>
+<li> Ao fazer o logout os dados do local storage serão limpados</li>
+<li> É possível fazer login como pessoa vendedora usuando o email:fulana@deliveryapp.com e senha:fulana@123</li>
+<li> Como pessoa vendedora você poderá ver todos as compras que foram feitas por todas as pessoas usuárias e alterar o status da compra de "pendente" para "em preparo", para "em trânsito" </li>  
+  
 
-Manter aderência do código à especificação. Seu programa deve se comportar como especificado no repositório, no protótipo e no Diagrama de ER;
 
-Manter a organização do seu código e a arquitetura geral da aplicação (tanto da API quando do front-end);
-
-Manter aderência ao padrão REST na API;
-
-Respeitar a estrutura do banco de dados. Sua implementação não deve adicionar ou remover tabelas, campos ou relacionamentos e sua API deve estar preparada para aproveitar essa estrutura por completo;
-
-Manter uma cobertura de testes. Seu código deve ser testável e possuir uma suíte de testes unitários e/ou de integração robusta e com alta cobertura.
-
-Implementar a funcionalidade de comunicação em tempo real, utilizando o socket.io.
-Manter aderência aos princípios SOLID;
+<h3>A minha contribuição</h3>
 
 
 # Tecnologias Utilizadas
@@ -75,12 +70,7 @@ Manter aderência aos princípios SOLID;
   <li> Rodrigo Sudario => https://github.com/RodrigoSudario</li>
 </ul>
 
-<h2>Como funciona a aplicação</h2>
-<p> È possível criar uma conta que seria registrada como "consumidor"ou utilizar a conta já registrada para esse propósito -> email:zebirita@email.com, senha:$#zebirita#$</p>
-<p> Uma vez logado, realize as compras e faça checkout,você poderá ver o registro de suas compras na aba pedidos </p>
-<p> Se desejar ver o fluxo do vendedor, faça logout e entra na conta da vendedora fulana, email:fulana@deliveryapp.com, senha:fulana@123, nessa conta você podera alterar o status da compra de "pendente", para "em preparo", para "em trânsito" e o cliente em sua respectiva conta poderá alterar para "entregue"</p>
 
-<h3>A minha contribuição</h3>
   <li> Estrutura da aplicação do Front-End e do Back-End</li>
     <p> O Front-End foi estruturado para garantir a organização do códido em pastas com as suas devidas responsabilidades, incluindo libs, e uma pasta de serviço onde as funções que realizavam as requisições e  lidavam com o localStorage eram disponibilizadas</p>
     <p> O Back-End foi estrtuturado com o padrão MSC e com o banco de dados sendo gerenciado pela ORM - Sequelize, organizando as validações e estruturas de uma maneira separada</p>

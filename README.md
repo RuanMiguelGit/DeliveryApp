@@ -89,7 +89,7 @@
   <p> È possível conferir a participação de todos os membros através do link : https://trello.com/invite/b/JCEOPoMY/e00fa52426f04ec8c8d9a08390f35a64/g13-delivery-app</p>
   
  # Testes 
- <li> É posível rodas os testes de integração desenvolvidos pela equipe de back-end da trybe como o comando npm run test </li>
+ <li> É posível rodas os testes de end-to-end desenvolvidos pela equipe de back-end da trybe como o comando npm run test </li>
  <p> Os testes unitários estão em desenvolvimento, devido a circustâncias do curso, de circustaâncias do projeto em si tais como dificuldades com o sequelize, falta de um membro do grupo e da sequência do curso e da não obrigatoriedade dos testes para projeto específico, não houve tempo hábil para a reaização dos mesmos, porém reconheço que os testes são de supra importância e essêncial no desenvolvimento de qualquer aplicação</p>
  
  
